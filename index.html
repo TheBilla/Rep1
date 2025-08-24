@@ -1,11 +1,241 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The NEW Way To Create Slides — 2025</title>
+  <meta name="description" content="A one‑file HTML/CSS/JS slide deck template that emulates d‑squared70’s AI‑generated‑presos site." />
+  <style>
+    :root{
+      --bg:#0b0b0b;           /* page background */
+      --fg:#f5f5f5;           /* primary text */
+      --muted:#9aa0a6;        /* secondary text */
+      --chip:#1f2937;         /* nav button background */
+      --accent:#7c3aed;       /* optional accent */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--fg);
+         font:400 18px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+
+    /* Slide layout */
+    .slide{display:none;height:100vh;width:100vw;padding:7vh 8vw;position:relative}
+    .slide.active{display:block}
+
+    /* Typography */
+    h1,h2,h3{margin:0 0 .6rem 0;line-height:1.12}
+    h1{font-size:min(8vw,56px);letter-spacing:-.02em}
+    h2{font-size:min(5.5vw,40px)}
+    h3{font-size:min(4.2vw,28px)}
+    p,li{font-size:min(3.2vw,22px)}
+    ul{list-style:disc;padding-left:1.2em;margin:.8rem 0}
+    .kicker{opacity:.85;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.9rem}
+    .dim{color:var(--muted)}
+
+    /* Common helpers */
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+    .center{display:flex;align-items:center;justify-content:center;height:100%}
+    .chips{display:flex;flex-wrap:wrap;gap:.6rem}
+    .chip{background:#111;border:1px solid #27272a;border-radius:999px;padding:.35rem .7rem}
+    .big{font-size:min(4vw,28px)}
+    .stack{display:flex;flex-direction:column;gap:.35rem}
+    img.logo{height:min(22vh,160px);width:auto;object-fit:contain;filter:drop-shadow(0 4px 18px rgba(0,0,0,.3))}
+
+    /* Counter & nav */
+    #counter{position:fixed;right:8vw;bottom:6.8vh;color:var(--muted);font-weight:600}
+    .nav{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:12px 16px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.35));pointer-events:none}
+    .nav button{pointer-events:auto;border:0;background:var(--chip);color:#fff;padding:10px 14px;border-radius:12px;font-weight:700;cursor:pointer;opacity:.92}
+    .nav button:disabled{opacity:.35;cursor:not-allowed}
+    kbd{background:#111;padding:.25em .45em;border-radius:.35em;border:1px solid #333;font-size:.9em}
+    a{color:#8ab4f8}
+
+    /* Mobile tweaks */
+    @media (max-width: 720px){
+      .grid-2{grid-template-columns:1fr;}
+      ul{padding-left:1rem}
+    }
+  </style>
 </head>
 <body>
-    <h1>Hi!!!!!</h1>
+
+  <!-- Slide 1 -->
+  <section class="slide active">
+    <div class="kicker">The NEW Way To Create Slides</div>
+    <h1>in 2025</h1>
+    <div class="grid-2" style="margin-top:6vh">
+      <img src="ChatGPT.png" alt="ChatGPT logo" class="logo" />
+      <img src="Claude.png" alt="Claude logo" class="logo" />
+    </div>
+  </section>
+
+  <!-- Slide 2 -->
+  <section class="slide">
+    <h2>AI Generated Magic</h2>
+    <ul class="big">
+      <li>10–25% time inside PowerPoint/Slides</li>
+      <li>Escape soulless, locked templates</li>
+    </ul>
+  </section>
+
+  <!-- Slide 3 -->
+  <section class="slide">
+    <h2>Enter AI</h2>
+    <ul class="big">
+      <li>Ideate</li>
+      <li>Structure</li>
+      <li>Visualize</li>
+      <li>Focus on substance</li>
+    </ul>
+  </section>
+
+  <!-- Slide 4 -->
+  <section class="slide">
+    <h2>Old Way vs New Way</h2>
+    <div class="grid-2" style="margin-top:2vh">
+      <div>
+        <h3>Old</h3>
+        <div class="chips">
+          <span class="chip">Gamma</span>
+          <span class="chip">StoryDoc</span>
+          <span class="chip">Chronicle</span>
+        </div>
+      </div>
+      <div>
+        <h3>New</h3>
+        <div class="stack big">
+          <span>AI + Code</span>
+          <span>HTML / CSS / JS</span>
+          <span>Unlimited animations</span>
+          <span>Live charts & interactive</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 5 -->
+  <section class="slide">
+    <div class="kicker">Step 1</div>
+    <h2>Write First</h2>
+    <ul class="big">
+      <li>Writing = Thinking</li>
+      <li>Add <code>[visual cues]</code> for AI</li>
+    </ul>
+  </section>
+
+  <!-- Slide 6 -->
+  <section class="slide">
+    <div class="kicker">Step 2</div>
+    <h2>6 Variations</h2>
+    <div class="grid-2" style="margin-top:2vh">
+      <div class="center"><img src="ChatGPT.png" alt="ChatGPT" class="logo" /></div>
+      <div class="center"><img src="Claude.png" alt="Claude" class="logo" /></div>
+    </div>
+    <ul class="big">
+      <li>3× GPT‑5 + 3× Claude</li>
+      <li>Constrain brand colors, tone, style</li>
+      <li>Try fun styles: “Ghibli”, “Pixar”, …</li>
+    </ul>
+  </section>
+
+  <!-- Slide 7 -->
+  <section class="slide">
+    <div class="kicker">Step 3</div>
+    <h2>Iterate</h2>
+    <ul class="big">
+      <li>Copy → New chat → Refine</li>
+      <li>Pro tip: try Cursor</li>
+    </ul>
+  </section>
+
+  <!-- Slide 8 -->
+  <section class="slide">
+    <div class="kicker">Step 4</div>
+    <h2>Add Media</h2>
+    <ul class="big">
+      <li>Folder + Media = ✨ Magic</li>
+      <li>Use <code>[brackets]</code> as markers</li>
+    </ul>
+  </section>
+
+  <!-- Slide 9 -->
+  <section class="slide">
+    <div class="kicker">Step 5</div>
+    <h2>Share Anywhere</h2>
+    <ol class="big">
+      <li>GitHub →</li>
+      <li>Upload →</li>
+      <li>Pages →</li>
+      <li>Share the URL</li>
+    </ol>
+  </section>
+
+  <!-- Slide 10 -->
+  <section class="slide">
+    <h2>The Future</h2>
+    <ul class="big">
+      <li>⏰ Hours in PPT → ⚡ Minutes with AI</li>
+      <li>Message × Delivery</li>
+    </ul>
+  </section>
+
+  <!-- Slide 11 -->
+  <section class="slide">
+    <h2>Workflow</h2>
+    <p class="big">Write → Generate → ✨ Polish → Ship</p>
+    <p class="dim">Loop and level up each time</p>
+  </section>
+
+  <div id="counter"></div>
+  <div class="nav">
+    <button id="prev" type="button">← Previous</button>
+    <div class="dim">Use <kbd>←</kbd> / <kbd>→</kbd></div>
+    <button id="next" type="button">Next →</button>
+  </div>
+
+  <script>
+    const slides = [...document.querySelectorAll('.slide')];
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const counter = document.getElementById('counter');
+    let i = 0;
+
+    function clamp(n,min,max){return Math.min(Math.max(n,min),max)}
+    function show(idx){
+      i = clamp(idx, 0, slides.length-1);
+      slides.forEach((s, j) => s.classList.toggle('active', j === i));
+      counter.textContent = `${i+1}/${slides.length}`;
+      prevBtn.disabled = i === 0; 
+      nextBtn.disabled = i === slides.length - 1;
+      location.hash = `#${i+1}`;
+    }
+
+    // Buttons
+    prevBtn.addEventListener('click', () => show(i-1));
+    nextBtn.addEventListener('click', () => show(i+1));
+
+    // Keyboard
+    addEventListener('keydown', (e) => {
+      if(['ArrowRight','PageDown',' '].includes(e.key)) { e.preventDefault(); show(i+1); }
+      if(['ArrowLeft','PageUp','Backspace'].includes(e.key)) { e.preventDefault(); show(i-1); }
+    });
+
+    // Touch swipe
+    let startX = null;
+    addEventListener('touchstart', e => { startX = e.changedTouches[0].clientX; }, {passive:true});
+    addEventListener('touchend', e => {
+      if(startX == null) return;
+      const dx = e.changedTouches[0].clientX - startX;
+      if(Math.abs(dx) > 40) show(i + (dx < 0 ? 1 : -1));
+      startX = null;
+    }, {passive:true});
+
+    // Deep link via hash (#1, #2, ...)
+    function fromHash(){
+      const n = parseInt(location.hash.slice(1), 10);
+      if(!Number.isNaN(n)) show(n-1); else show(0);
+    }
+    addEventListener('hashchange', fromHash);
+    fromHash();
+  </script>
 </body>
 </html>
